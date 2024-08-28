@@ -1,0 +1,44 @@
+FUNCTION DEFINITION:
+
+************************************************************************************************************************************************************************************
+
+FUNCTION - get_slot_machine_spin(rows, cols, symbols)
+
+rows: The number of rows in the slot machine.
+cols: The number of columns in the slot machine.
+symbols: A dictionary where keys are symbols and values are their counts.
+
+Let's assume Symbol_Dict = {"A": 2, "B": 3, "C": 4, "D": 5} and the function is called with rows=3, cols=3, symbols=Symbol_Dict.
+
+all_symbols becomes ["A", "A", "B", "B", "B", "C", "C", "C", "C", "D", "D", "D", "D", "D"].
+
+For each of the 3 columns (cols=3):
+
+A copy of all_symbols is created.
+Random symbols are selected and removed from the copy to fill the 3 rows (rows=3) of the column.
+The process is repeated for each column, resulting in a list of columns with randomly selected symbols.
+The function returns a list of columns, each containing 3 symbols.
+
+By following this process, the function simulates the spinning of a 3x3 slot machine and generates a random outcome based on the symbol counts provided.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FUNCTION - print_slot_machine(columns)
+
+columns: A list of lists, where each inner list represents a column of symbols in the slot machine.
+
+The print_slot_machine function prints the slot machine's columns row by row. It takes one argument, columns, which is a list of lists, where each inner list represents a column of symbols.
+
+The outer loop iterates over the rows based on the length of the first column (columns[0]). The inner loop iterates over each column using enumerate, providing both the index i and the column content. For each symbol in the current row, the function checks if it is the last column (i != len(columns) - 1). If not, it prints the symbol followed by | and a space without ending the line (end=" "). If it is the last column, it prints the symbol and ends the line, moving to the next row.
+
+Example:
+
+For columns = [["A", "B", "C"], ["D", "E", "F"], ["G", "H", "I"]]:
+
+First row: Prints A | D | G
+Second row: Prints B | E | H
+Third row: Prints C | F | I
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

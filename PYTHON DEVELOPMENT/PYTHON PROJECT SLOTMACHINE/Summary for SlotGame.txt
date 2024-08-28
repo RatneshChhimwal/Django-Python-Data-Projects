@@ -1,0 +1,81 @@
+This Python script simulates a simple slot machine game with various functions designed to 
+handle different aspects of the game mechanics and user interactions.
+
+__ Constants and Dictionaries: __
+
+MAX_LINES, MAX_BET, MIN_BET: These constants define the maximum number of betting lines and the range for betting amounts.
+ROWS, COLS: These constants specify the dimensions of the slot machine window (grid).
+Symbol_Dict: Dictionary mapping symbols (A, B, C, D) to their respective counts in the slot machine.
+Symbol_Values: Dictionary mapping symbols to their multiplier values for determining winnings.
+
+**************************************************************************************************************************************************
+
+Functions:
+
+1 - get_slot_machine_spin(rows, cols, symbols):
+
+Generates a random spin for the slot machine.
+Uses random.choice() to pick symbols based on their weights defined in Symbol_Dict.
+Returns a 2D list (columns) representing the slot machine grid after a spin.
+
+
+2 - print_slot_machine(columns):
+
+Prints the current state of the slot machine grid (columns) in a readable format.
+Iterates through each row and column of columns, printing each symbol separated by '|'.
+
+
+3 - check_winnings(columns, lines, bet, values):
+
+Checks if there are any winning combinations in the slot machine grid.
+Compares symbols across lines to determine if they match.
+Calculates and returns the total winnings (winnings) and the winning line numbers (winning_line).
+
+
+4 - deposit():
+
+Prompts the user to enter an initial deposit amount.
+Validates that the input is a positive integer.
+Returns the validated deposit amount.
+
+
+5 - get_number_of_lines():
+
+Prompts the user to enter the number of betting lines they want to play (between 1 and MAX_LINES).
+Validates the input to ensure it's a valid integer within the specified range.
+Returns the chosen number of lines.
+
+
+6 - get_bet():
+
+Prompts the user to enter the betting amount for each line.
+Validates that the input is a positive integer within the range defined by MIN_BET and MAX_BET.
+Returns the validated bet amount.
+
+
+7 - spin(balance):
+
+Manages the game flow for a single spin of the slot machine.
+Calls get_number_of_lines() and get_bet() to determine the user's bet configuration.
+Ensures that the total bet does not exceed the current balance.
+Calls get_slot_machine_spin() to spin the slot machine and display the results.
+Calls check_winnings() to calculate and display any winnings based on the spin results.
+Returns the net balance change after deducting the total bet from the total winnings.
+
+
+8 - main():
+
+Orchestrates the main loop of the slot machine game.
+Calls deposit() to initialize the player's balance.
+Enters a loop where the player can spin the slot machine until they choose to quit.
+After each spin, updates the player's balance and displays the current balance.
+Prints the final balance when the player decides to quit.
+
+**************************************************************************************************************************************************
+
+Execution:
+The script begins by prompting the user to deposit an initial amount.
+The main loop allows the player to spin the slot machine or quit.
+Each spin involves selecting the number of lines and the bet amount, spinning the slot machine, checking for winnings, and updating the balance.
+The game continues until the player decides to quit, at which point the final balance is displayed.
+This structure and flow simulate a basic slot machine game with configurable betting options and dynamic outcomes based on random spins.

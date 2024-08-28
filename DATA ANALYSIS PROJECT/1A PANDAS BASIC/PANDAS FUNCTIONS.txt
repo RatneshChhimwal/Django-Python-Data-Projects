@@ -1,0 +1,14 @@
+BELOW ARE THE 10 EXERCISE QUESTIONS SOLVED IN THE ABOVE JUPYTER NOTEBOOK
+
+1. Calculate Total Sales:** Calculate the total sales amount by summing up the "TotalPrice" column.
+2. Find Average Quantity Sold:** Calculate the average quantity sold across all products.
+3. Identify Best Selling Product:** Determine the product that generated the highest total revenue.
+4. Explore Sales Distribution by Category:** Visualize the distribution of sales across different product categories.
+5. Analyze Sales Trends Over Time:** Plot a line chart showing how total sales vary over time (using the "Date" column).
+6. Investigate Sales Patterns by Region:** Compare total sales amounts across different regions.
+7. Calculate Profit Margin:** Add a new column to the DataFrame representing the profit margin (total revenue - total cost) for each sale.
+8. Identify Top Customers:** Find the top 5 customers who contributed the most to total sales.
+9. Examine Price Variations:** Calculate the average unit price for each product and visualize any significant variations.
+10.Perform Product Association Analysis:** Determine if there are any associations between products frequently bought together (e.g., using the Apriori algorithm).
+
+These exercises cover a range of basic to intermediate analytical tasks commonly encountered by data analysts.
