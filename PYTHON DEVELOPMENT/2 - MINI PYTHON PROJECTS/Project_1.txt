@@ -1,0 +1,12 @@
+The game "PIG" is a simple dice game that's often used to teach basic programming concepts.
+The goal of the game is to score higher than your opponent and win.
+
+How the Game Works:
+Players: 2
+
+Gameplay:
+
+1. Players take turns to roll a six-sided die as many times as they wish during their turn.
+2. The value of each roll is added to their turn total.
+3. A player can choose to "Hold" at any time during their turn, which adds their turn total to their overall score and ends their turn.
+4. If the player rolls a 1, their turn ends immediately, and they score nothing for that turn (i.e., their turn total is reset to 0).
