@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Contact Page
+{% endblock title %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1>Contact Me</h1>
+        <div class="contact-info mb-4">
+            <p>Phone: <a href="tel:+918505884478" class="btn btn-outline-primary">+91 8505884478</a></p>
+            <p>Email: <a href="mailto:Ratnesh.sharma1831999@gmail.com" class="btn btn-outline-primary">Ratnesh.sharma1831999@gmail.com</a></p>
+        </div>
+
+        <div class="social-media mb-4">
+            <p>Connect with me:</p>
+            <a href="https://twitter.com/Ratnesh1803" target="_blank" class="btn btn-outline-info">Twitter</a>
+            <a href="https://www.linkedin.com/in/ratnesh-chhimwal/" target="_blank" class="btn btn-outline-info">LinkedIn</a>
+            <a href="https://github.com/RatneshChhimwal" target="_blank" class="btn btn-outline-info">GitHub</a>
+            <a href="https://instagram.com/ratnesh_1803" target="_blank" class="btn btn-outline-info">Instagram</a>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send me a message</h2>
+            <form action="path_to_your_form_handler" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

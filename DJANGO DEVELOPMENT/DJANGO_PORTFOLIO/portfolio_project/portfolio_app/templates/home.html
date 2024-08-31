@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock extrahead %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="filters mb-4">
+            <input type="text" id="name-search" class="form-control" placeholder="Search by name...">
+            <div class="tags-list mt-2">
+                {% if tags %}
+                    {% for tag in tags %}
+                        <button class="btn btn-primary btn-sm m-1 tag" data-tag="{{ tag.name|lower }}">{{ tag.name }}</button>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row">
+            {% if projects %}
+                {% for project in projects %}
+                <div class="col-md-4 mb-4 project" data-name="{{ project.title|lower }}" data-tags="{{ project.tags.all|join:', '|lower }}">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{% url 'project' project.id %}" class="text-dark">{{ project.title }}</a></h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <p class="card-text"><small class="text-muted">Tags: {{ project.tags.all|join:', '|lower }}</small></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
+
+{% block extrajs %}
+    <script src="{% static 'javascript/home.js' %}"></script>
+{% endblock extrajs %}
