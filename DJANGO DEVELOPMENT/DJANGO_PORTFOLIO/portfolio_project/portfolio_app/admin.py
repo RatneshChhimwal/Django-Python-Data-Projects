@@ -22,6 +22,14 @@ class TagAdmin(admin.ModelAdmin):
     list_display = ("name",)
     search_fields = ("name",)
 
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = (
+        "username",
+        "bio"
+    )
+
 admin.site.register(Tag, TagAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(ProjectImage)
+admin.site.register(Profile, ProfileAdmin)
+

@@ -57,13 +57,15 @@ header {
 
 /* Main Content Area */
 main {
-  max-width: 1200px;
+  max-width: 1900px; /* Increase the maximum width for a more rectangular shape */
   margin: 20px auto;
-  padding: 20px;
+  padding: 20px 40px; /* Adjust padding: more padding on the sides for a wider look */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-height: 400px; /* Optional: Set a minimum height to ensure it's not too short */
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

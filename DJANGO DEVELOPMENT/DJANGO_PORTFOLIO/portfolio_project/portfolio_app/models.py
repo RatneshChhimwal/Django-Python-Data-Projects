@@ -26,3 +26,12 @@ class ProjectImage(models.Model):
 
     def __str__(self):
         return f"{self.project.title} Image"
+    
+class Profile(models.Model):
+    username = models.CharField(max_length=100)
+    picture = models.ImageField(upload_to="user_image/")
+    bio = models.TextField(blank=True)
+
+    def __str__(self):
+        return self.username
+    

@@ -7,7 +7,8 @@ from .models import *
 def home(request):
     project = Project.objects.all()
     tags = Tag.objects.all()
-    return render(request, 'home.html', {"projects":project, "tags":tags})
+    profile = Profile.objects.first()
+    return render(request, 'home.html', {"projects":project, "tags":tags, "profile":profile})
 
 def contact(request):
     return render(request, 'contact.html')
