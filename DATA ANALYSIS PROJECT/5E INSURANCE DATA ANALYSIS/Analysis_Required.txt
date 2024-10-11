@@ -1,0 +1,43 @@
+Here are 20 different types of analysis that can be done on the given dataset:
+
+1. **Distribution of Policy Expiry Dates** - Analyze how policies are distributed across different expiration dates.
+   
+2. **Frequency of Different Locations** - Calculate the distribution of policies across urban and rural locations.
+
+3. **State-wise Policy Distribution** - Analyze the number of policies in each state (NY, WI, IL, NJ).
+
+4. **Regional Policy Comparison** - Compare the number of policies between the East and Midwest regions.
+
+5. **Distribution of Insured Values** - Analyze the range and distribution of insured values.
+
+6. **Construction Type Distribution** - Analyze the frequency of different construction types (Frame, Fire Resist, Masonry).
+
+7. **Business Type Analysis** - Breakdown of policies by different business types (Retail, Apartment, Farming, etc.).
+
+8. **Earthquake Coverage Analysis** - Analyze how many policies have earthquake coverage.
+
+9. **Flood Coverage Analysis** - Analyze how many policies include flood coverage.
+
+10. **Correlation Between Construction Type and Insured Value** - Examine if there’s any relationship between the type of construction and the insured value.
+
+11. **State-wise Earthquake Coverage** - Breakdown of earthquake coverage by state.
+
+12. **State-wise Flood Coverage** - Breakdown of flood coverage by state.
+
+13. **Region-wise Business Type Distribution** - Compare the types of businesses insured in different regions.
+
+14. **Top 5 Highest Insured Values** - Find the top 5 policies with the highest insured value.
+
+15. **Policy Count Based on Construction Type and Location (Urban vs Rural)** - Compare the number of policies for different construction types between urban and rural areas.
+
+16. **Distribution of Policies in Urban vs Rural Regions** - Calculate the proportion of policies in urban versus rural locations.
+
+17. **Analysis of Policies Expiring in January 2021** - Focus on policies that are expiring in January 2021 and their characteristics.
+
+18. **Average Insured Value for Each Business Type** - Calculate the average insured value for each business type.
+
+19. **Comparing Urban and Rural Business Types** - Compare the types of businesses insured in urban and rural areas.
+
+20. **Impact of Earthquake and Flood Coverage on Insured Value** - Analyze whether policies with earthquake or flood coverage have higher insured values.
+
+These analyses can provide insights into different aspects of the policy data, including risk management, distribution patterns, and insurance coverage characteristics.
