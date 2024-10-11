@@ -1,4 +1,8 @@
 ADMIN CREDENTIALS:
 
 Username - Ratnesh
+<<<<<<< HEAD
 Password - 123
+=======
+Password - 123
+>>>>>>> cea58b599dac7dce9e4bd639260d1a136fa1efb7
