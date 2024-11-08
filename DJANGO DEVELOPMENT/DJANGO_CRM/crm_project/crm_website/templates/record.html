@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card">
+    <div class="card-header">
+        Customer ID: {{ customer_record.id }}
+    </div>
+    <div class="card-body">
+        <h5 style="font-family:Georgia, serif;" class="card-title">
+            <strong>{{ customer_record.first_name }} {{ customer_record.last_name }}</strong>
+        </h5>
+        <p class="card-text">
+            <table>
+                <tr>
+                    <td><b>Customer Email:</b>&emsp;&emsp;</td>
+                    <td>{{ customer_record.email }}</td>
+                </tr>
+                <tr>
+                    <td><b>Customer Phone:</b>&emsp;&emsp;</td>
+                    <td>{{ customer_record.phone }}</td>
+                </tr>
+                <tr>
+                    <td><b>Customer Address:</b>&emsp;&emsp;</td>
+                    <td>{{ customer_record.address }}</td>
+                </tr>
+                <tr>
+                    <td><b>Customer City:</b>&emsp;&emsp;</td>
+                    <td>{{ customer_record.city }}</td>
+                </tr>
+                <tr>
+                    <td><b>Customer State:</b>&emsp;&emsp;</td>
+                    <td>{{ customer_record.state }}</td>
+                </tr>
+                <tr>
+                    <td><b>Customer Zipcode:</b>&emsp;&emsp;</td>
+                    <td>{{ customer_record.zipcode }}</td>
+                </tr>
+                <tr>
+                    <td><b>Record created at:</b>&emsp;&emsp;</td>
+                    <td>{{ customer_record.created_at }}</td>
+                </tr>
+            </table>
+        </p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Go back</a>
+        <a href="{% url 'update_record' customer_record.id %}" class="btn btn-success">Update Record</a>
+        <a href="{% url 'delete_record' customer_record.id %}" class="btn btn-danger">Delete record</a>
+    </div>
+</div>
+
+{% endblock %}
